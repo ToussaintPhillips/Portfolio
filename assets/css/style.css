@@ -1,0 +1,232 @@
+/* Base styles for the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Styles for the header */
+header {
+    background-color: #add8e6; /* Light blue background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1000;
+    animation: bounce 0.5s ease; /* Bounce animation */
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Style for main heading */
+h1 {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 2em;
+}
+
+/* Style for highlighted text */
+.highlight {
+    background-color: #fcd34d; /* Yellow background */
+    color: #333;
+    padding: 0 5px;
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation list item styles */
+nav li {
+    padding: 0 10px;
+}
+
+/* Navigation link styles */
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #000;
+}
+
+/* Style for sub-header */
+.sub-header {
+    background-color: #d3d3d3; /* Light grey background */
+    height: 120px;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* Column layout styles */
+.column {
+    flex: 1;
+    padding: 10px;
+    position: relative;
+}
+
+/* Title section styles */
+.title h2 {
+    margin: 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 2em;
+    text-align: right;
+}
+
+/* Decorative line after title */
+.title::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #333;
+}
+
+/* Content section styles */
+.content {
+    flex-basis: 70%;
+    padding-left: 20px;
+}
+
+/* Styles for the about-me section */
+.about-me-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image styling in about-me section */
+.about-me-image {
+    max-width: 40%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Grid layout for work items */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+/* Work item styling */
+.work-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Image styling in work items */
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Project title overlay in work items */
+.work-item .project-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(252, 211, 77, 0.8); /* Semi-transparent yellow */
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hover effect for work items */
+.work-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Large work item styling */
+.work-item.large {
+    grid-column: 1 / -1; /* Span entire grid */
+}
+
+/* Styles for contact links */
+.contact-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Contact link styles */
+.contact-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for contact links */
+.contact-links a:hover {
+    color: #007bff; /* Blue hover color */
+}
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    /* Stacking container columns on small screens */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Adjusting title and content to full width */
+    .title, .content {
+        flex-basis: 100%;
+    }
+
+    /* Removing decorative line in title on small screens */
+    .title::after {
+        content: none;
+    }
+
+    /* Adjusting grid layout for work items on small screens */
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjusting large and small work items to span full width */
+    .work-item.large, .work-item.small {
+        grid-column: span 1;
+    }
+
+    /* Stacking contact links on small screens */
+    .contact-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
